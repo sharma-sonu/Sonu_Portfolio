@@ -1,8 +1,22 @@
-import { motion } from "framer-motion"; // For animations
-import { FaGithub } from "react-icons/fa"; // GitHub icon
+import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+
+// ✅ Import all images
+import EWSTPUT from "../assets/images/EWSTPUT.jpg";
+import HBMS from "../assets/images/HBMS.png";
+import portfolioImg from "../assets/images/portfolio.jpg";
+import quizPlatform from "../assets/images/quiz-platform.jpg";
+import atmMachine from "../assets/images/ATMMachine.jpeg";
+import calculator from "../assets/images/Calculator.jpeg";
+
+// ✅ Import all PDFs
+import waterCert from "../assets/pdfs/904437_Certi.pdf";
+import waterResearch from "../assets/pdfs/22988001.Estimating water level in storage tank.pdf";
+import waterPatent from "../assets/pdfs/22988001.Estimating water level in storage tank.pdf";
+import heartResearch from "../assets/pdfs/ProjectReport.pdf";
 
 const Projects = () => {
-  // 🎓 Academic Projects (IoT + Research)
+  // 🔹 Academic Projects data (IoT + Research)
   const academicProjects = [
     {
       title: "Water Level Prediction System",
@@ -10,10 +24,10 @@ const Projects = () => {
         "An IoT-based project that estimates water level in storage tanks and predicts usage time.",
       github:
         "https://github.com/sharma-sonu/Estimating-water-level-in-storage-tank-and--predicting-usage-time",
-      image: "/images/EWSTPUT.jpg",
-      certificate: "/pdfs/904437_Certi.pdf",
-      research: "/pdfs/22988001.Estimating water level in storage tank.pdf",
-      patent: "/pdfs/22988001.Estimating water level in storage tank.pdf",
+      image: EWSTPUT,
+      certificate: waterCert,
+      research: waterResearch,
+      patent: waterPatent,
     },
     {
       title: "Heart Rate Monitoring System",
@@ -21,50 +35,50 @@ const Projects = () => {
         "A minor IoT project using Arduino and pulse sensor for real-time heart rate detection.",
       github:
         "https://github.com/sharma-sonu/Heartbeat-Monitoring-system-using-Arduino",
-      image: "/images/HBMS.png",
-      research: "/pdfs/ProjectReport.pdf",
+      image: HBMS,
+      research: heartResearch,
     },
   ];
 
-  // 💻 Personal Projects (React + Java)
+  // 🔹 Personal Projects data (React + Java)
   const personalProjects = [
     {
       title: "Portfolio Website",
       description:
         "My personal responsive portfolio showcasing projects, certifications, and journey.",
       github: "https://github.com/sharma-sonu/Sonu_Portfolio",
-      image: "/images/portfolio.jpg",
+      image: portfolioImg,
     },
     {
       title: "Quiz Platform",
       description:
         "An interactive quiz web app with teacher-student interface and timer support.",
       github: "https://github.com/yourusername/quiz-platform",
-      image: "/images/quiz-platform.jpg",
+      image: quizPlatform,
     },
     {
       title: "ATM Machine",
       description:
         "A Java-based GUI application to generate and save customer receipts.",
       github: "https://github.com/sharma-sonu/ATM-Machine",
-      image: "/images/ATMMachine.jpeg",
+      image: atmMachine,
     },
     {
       title: "Receipt Calculator",
       description:
-        "Developed a receipt calculator that computes total, tax, discount, and final amount with receipt generation.",
+        "Developed a receipt Calculator where it Calculate, Tax price, Deduction ",
       github: "https://github.com/sharma-sonu/Receipt_Calculator",
-      image: "/images/Calculator.jpeg",
+      image: calculator,
     },
   ];
 
-  // ✨ Framer Motion Animation Variants
+  // 🔹 Animation variants for Framer Motion
   const cardVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
-  // 🔹 Card Component
+  // 🔹 Project Card Component
   const Card = ({ title, description, image, github }) => (
     <motion.div
       variants={cardVariants}
@@ -112,12 +126,11 @@ const Projects = () => {
     </motion.div>
   );
 
+  // 🔹 Layout
   return (
     <section className="min-h-screen bg-gradient-to-b from-[#1e0b59] to-[#2a155f] py-20 text-white">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-yellow-300 mb-12">
-          My Projects
-        </h2>
+        <h2 className="text-4xl font-bold text-yellow-300 mb-12">My Projects</h2>
 
         {/* 🎓 Academic Projects Section */}
         <h3 className="text-3xl font-semibold text-purple-300 mb-6">
@@ -125,20 +138,12 @@ const Projects = () => {
         </h3>
 
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mb-16">
-          {/* Water Level Project + PDFs */}
           <Card {...academicProjects[0]} />
-          <PdfFrame
-            src={academicProjects[0].research}
-            title="Research Paper"
-          />
-          <PdfFrame
-            src={academicProjects[0].certificate}
-            title="Certificate"
-          />
+          <PdfFrame src={academicProjects[0].research} title="Research Paper" />
+          <PdfFrame src={academicProjects[0].certificate} title="Certificate" />
           <PdfFrame src={academicProjects[0].patent} title="Patent" />
         </div>
 
-        {/* Heart Rate Monitoring System */}
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mb-16 justify-center">
           <Card {...academicProjects[1]} />
           <PdfFrame
@@ -153,8 +158,8 @@ const Projects = () => {
         </h3>
 
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8">
-          {personalProjects.map((project, i) => (
-            <Card key={i} {...project} />
+          {personalProjects.map((p, i) => (
+            <Card key={i} {...p} />
           ))}
         </div>
       </div>
