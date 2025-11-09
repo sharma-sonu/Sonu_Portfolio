@@ -1,18 +1,23 @@
-import { motion } from "framer-motion";
-
 const certifications = [
-  { id: 1, image: "/images/cisco1.png" },
-  { id: 2, image: "/images/coursera1.png" },
-  { id: 3, image: "/images/nptel.png" },
-  { id: 4, image: "/images/freecodecamp.png" },
+  { id: 1, image: "/src/assets/images/JavaFondationCertification.jpg" },
+  { id: 2, image: "/src/assets/images/networking_internship.jpg" },
+  { id: 3, image: "/src/assets/images/oasis.jpg" },
 ];
 
 const certificates = [
-  { id: 1, image: "/images/cert1.jpg" },
-  { id: 2, image: "/images/cert2.jpg" },
-  { id: 3, image: "/images/cert3.jpg" },
-  { id: 4, image: "/images/cert4.jpg" },
-  { id: 5, image: "/images/cert5.jpg" },
+  { id: 1, image: "/src/assets/images/C++.jpg" },
+  { id: 2, image: "/src/assets/images/DBMS_1.jpg" },
+  { id: 3, image: "/src/assets/images/DBMS_2.jpg" },
+  { id: 4, image: "/src/assets/images/FrontenDEv.jpg" },
+  { id: 5, image: "/src/assets/images/Cisco_Javascript.jpg" },
+  { id: 6, image: "/src/assets/images/ReactBasics.jpg" },
+  { id: 7, image: "/src/assets/images/AdvancedReact.jpg" },
+  { id: 8, image: "/src/assets/images/VersionControl.jpg" },
+  { id: 9, image: "/src/assets/images/CloudComputing.jpg" },
+  { id: 10, image: "/src/assets/images/Cisco_networking.jpg" },
+  { id: 11, image: "/src/assets/images/circuit.jpg" },
+  { id: 12, image: "/src/assets/images/Essay_Writing.jpg" },
+  { id: 13, image: "/src/assets/images/NCC.jpg" },
 ];
 
 const Certifications = () => {
@@ -23,66 +28,44 @@ const Certifications = () => {
           My Certifications
         </h2>
 
-        {/* === 1️⃣ CERTIFICATION SECTION === */}
+        {/* === Certifications Section === */}
         <h3 className="text-3xl font-semibold text-purple-300 mb-8">
           🎓 Certifications
         </h3>
 
-        <div className="overflow-hidden relative w-full mb-20">
-          <motion.div
-            className="flex gap-8"
-            animate={{ x: ["0%", "-100%"] }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: 40,
-              ease: "linear",
-            }}
-          >
-            {[...certifications, ...certifications].map((item, index) => (
-              <div
-                key={index}
-                className="min-w-[220px] bg-white/10 rounded-xl border border-white/20 p-4 shadow-lg hover:shadow-yellow-400/30 transition"
-              >
-                <img
-                  src={item.image}
-                  alt={`Certification ${index + 1}`}
-                  className="w-full h-40 object-contain rounded-lg bg-white/5"
-                />
-              </div>
-            ))}
-          </motion.div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mb-20">
+          {certifications.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white/10 rounded-xl border border-white/20 p-4 shadow-lg hover:shadow-yellow-400/30 transition"
+            >
+              <img
+                src={item.image}
+                alt={`Certification ${item.id}`}
+                className="w-full h-40 object-contain rounded-lg bg-white/5"
+              />
+            </div>
+          ))}
         </div>
 
-        {/* === 2️⃣ CERTIFICATE IMAGES SECTION === */}
+        {/* === Certificates Section === */}
         <h3 className="text-3xl font-semibold text-purple-300 mb-8">
           🏆 Certificates
         </h3>
 
-        <div className="overflow-hidden relative w-full">
-          <motion.div
-            className="flex gap-8"
-            animate={{ x: ["-100%", "0%"] }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: 50,
-              ease: "linear",
-            }}
-          >
-            {[...certificates, ...certificates].map((cert, index) => (
-              <div
-                key={index}
-                className="min-w-[260px] bg-white/10 rounded-2xl overflow-hidden border border-white/20 shadow-lg"
-              >
-                <img
-                  src={cert.image}
-                  alt={`Certificate ${index + 1}`}
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-            ))}
-          </motion.div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {certificates.map((cert) => (
+            <div
+              key={cert.id}
+              className="bg-white/10 rounded-2xl overflow-hidden border border-white/20 shadow-lg"
+            >
+              <img
+                src={cert.image}
+                alt={`Certificate ${cert.id}`}
+                className="w-full h-48 object-cover"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

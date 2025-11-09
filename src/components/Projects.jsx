@@ -9,7 +9,7 @@ const Projects = () => {
       title: "Water Level Prediction System",
       description:
         "An IoT-based project that estimates water level in storage tanks and predicts usage time.",
-      github: "https://github.com/yourusername/water-level-system",
+      github: "https://github.com/sharma-sonu/Estimating-water-level-in-storage-tank-and--predicting-usage-time",
       image: "/src/assets/images/EWSTPUT.jpg",
       certificate: "/src/assets/pdfs/904437_Certi.pdf",
       research: "/src/assets/pdfs/22988001.Estimating water level in storage tank.pdf",
@@ -19,7 +19,7 @@ const Projects = () => {
       title: "Heart Rate Monitoring System",
       description:
         "A minor IoT project using Arduino and pulse sensor for real-time heart rate detection.",
-      github: "https://github.com/yourusername/heart-rate-monitor",
+      github: "https://github.com/sharma-sonu/Heartbeat-Monitoring-system-using-Arduino",
       image: "/src/assets/images/HBMS.png",
       research: "/src/assets/pdfs/ProjectReport.pdf",
     },
@@ -31,7 +31,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description:
         "My personal responsive portfolio showcasing projects, certifications, and journey.",
-      github: "https://github.com/yourusername/portfolio",
+      github: "https://github.com/sharma-sonu/Sonu_Portfolio",
       image: "/src/assets/images/portfolio.jpg",
     },
     {
@@ -42,11 +42,18 @@ const Projects = () => {
       image: "/src/assets/images/quiz-platform.jpg",
     },
     {
-      title: "Receipt Calculator",
+      title: "ATM Machine",
       description:
         "A Java-based GUI application to generate and save customer receipts.",
-      github: "https://github.com/yourusername/receipt-calculator",
-      image: "/src/assets/images/receipt-calculator.jpg",
+      github: "https://github.com/sharma-sonu/ATM-Machine",
+      image: "/src/assets/images/ATMMachine.jpeg",
+    },
+      {
+      title: "Receipt Calculator",
+      description:
+        "Developed a receipt Calculator where it Calculate, Tax price, Deduction ",
+      github: "https://github.com/sharma-sonu/Receipt_Calculator",
+      image: "/src/assets/images/Calculator.jpeg",
     },
   ];
 
