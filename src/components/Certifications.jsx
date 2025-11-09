@@ -1,23 +1,41 @@
+import javaCert from "../assets/images/JavaFondationCertification.jpg";
+import networkingCert from "../assets/images/networking_internship.jpg";
+import oasisCert from "../assets/images/oasis.jpg";
+
+import cppCert from "../assets/images/C++.jpg";
+import dbms1 from "../assets/images/DBMS_1.jpg";
+import dbms2 from "../assets/images/DBMS_2.jpg";
+import frontendDev from "../assets/images/FrontenDEv.jpg";
+import jsCert from "../assets/images/Cisco_Javascript.jpg";
+import reactBasics from "../assets/images/ReactBasics.jpg";
+import advancedReact from "../assets/images/AdvancedReact.jpg";
+import versionControl from "../assets/images/VersionControl.jpg";
+import cloudComputing from "../assets/images/CloudComputing.jpg";
+import networking from "../assets/images/Cisco_networking.jpg";
+import circuit from "../assets/images/circuit.jpg";
+import essayWriting from "../assets/images/Essay_Writing.jpg";
+import ncc from "../assets/images/NCC.jpg";
+
 const certifications = [
-  { id: 1, image: "/src/assets/images/JavaFondationCertification.jpg" },
-  { id: 2, image: "/src/assets/images/networking_internship.jpg" },
-  { id: 3, image: "/src/assets/images/oasis.jpg" },
+  { id: 1, image: javaCert },
+  { id: 2, image: networkingCert },
+  { id: 3, image: oasisCert },
 ];
 
 const certificates = [
-  { id: 1, image: "/src/assets/images/C++.jpg" },
-  { id: 2, image: "/src/assets/images/DBMS_1.jpg" },
-  { id: 3, image: "/src/assets/images/DBMS_2.jpg" },
-  { id: 4, image: "/src/assets/images/FrontenDEv.jpg" },
-  { id: 5, image: "/src/assets/images/Cisco_Javascript.jpg" },
-  { id: 6, image: "/src/assets/images/ReactBasics.jpg" },
-  { id: 7, image: "/src/assets/images/AdvancedReact.jpg" },
-  { id: 8, image: "/src/assets/images/VersionControl.jpg" },
-  { id: 9, image: "/src/assets/images/CloudComputing.jpg" },
-  { id: 10, image: "/src/assets/images/Cisco_networking.jpg" },
-  { id: 11, image: "/src/assets/images/circuit.jpg" },
-  { id: 12, image: "/src/assets/images/Essay_Writing.jpg" },
-  { id: 13, image: "/src/assets/images/NCC.jpg" },
+  { id: 1, image: cppCert },
+  { id: 2, image: dbms1 },
+  { id: 3, image: dbms2 },
+  { id: 4, image: frontendDev },
+  { id: 5, image: jsCert },
+  { id: 6, image: reactBasics },
+  { id: 7, image: advancedReact },
+  { id: 8, image: versionControl },
+  { id: 9, image: cloudComputing },
+  { id: 10, image: networking },
+  { id: 11, image: circuit },
+  { id: 12, image: essayWriting },
+  { id: 13, image: ncc },
 ];
 
 const Certifications = () => {
