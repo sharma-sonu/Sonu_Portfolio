@@ -2,11 +2,9 @@ import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 
 // ✅ Import all images
-import EWSTPUT from "../assets/images/Estimating.jpg";
-import HBMS from "../assets/images/Heart.png";
-import portfolioImg from "../assets/images/portfolio.jpg";
-import quizPlatform from "../assets/images/quiz-platform.jpg";
-import atmMachine from "../assets/images/ATMMachine.jpeg";
+import Estimating from "../assets/images/Estimating.jpg";
+import Heart from "../assets/images/Heart.png";
+import portfolioImg from "../assets/images/portfolio.png";
 import calculator from "../assets/images/Calculator.jpeg";
 
 // ✅ Import all PDFs
@@ -24,7 +22,7 @@ const Projects = () => {
         "An IoT-based project that estimates water level in storage tanks and predicts usage time.",
       github:
         "https://github.com/sharma-sonu/Estimating-water-level-in-storage-tank-and--predicting-usage-time",
-      image: EWSTPUT,
+      image: Estimating,
       certificate: waterCert,
       research: waterResearch,
       patent: waterPatent,
@@ -35,7 +33,7 @@ const Projects = () => {
         "A minor IoT project using Arduino and pulse sensor for real-time heart rate detection.",
       github:
         "https://github.com/sharma-sonu/Heartbeat-Monitoring-system-using-Arduino",
-      image: HBMS,
+      image: Heart,
       research: heartResearch,
     },
   ];
@@ -48,20 +46,6 @@ const Projects = () => {
         "My personal responsive portfolio showcasing projects, certifications, and journey.",
       github: "https://github.com/sharma-sonu/Sonu_Portfolio",
       image: portfolioImg,
-    },
-    {
-      title: "Quiz Platform",
-      description:
-        "An interactive quiz web app with teacher-student interface and timer support.",
-      github: "https://github.com/yourusername/quiz-platform",
-      image: quizPlatform,
-    },
-    {
-      title: "ATM Machine",
-      description:
-        "A Java-based GUI application to generate and save customer receipts.",
-      github: "https://github.com/sharma-sonu/ATM-Machine",
-      image: atmMachine,
     },
     {
       title: "Receipt Calculator",
