@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
-import resumePDF from "../assets/pdfs/Resume_IT.pdf";
+import resumePDF from "/pdfs/Resume_IT.pdf";
 
 const Resume = () => {
   // Framer Motion animation variants

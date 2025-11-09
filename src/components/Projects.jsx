@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaDownload } from "react-icons/fa";
 
-// ✅ Import images
+// ✅ Import images (keep these in src/assets)
 import Estimating from "../assets/images/Estimating.jpg";
 import Heart from "../assets/images/Heart.png";
 import portfolioImg from "../assets/images/portfolio.png";
 import calculator from "../assets/images/Calculator.jpeg";
 
-// ✅ Import PDFs
-import waterCert from "../assets/pdfs/904437_Certi.pdf";
-import waterResearch from "../assets/pdfs/22988001.Estimating water level in storage tank.pdf";
-import waterPatent from "../assets/pdfs/22988001.Estimating water level in storage tank.pdf";
-import heartResearch from "../assets/pdfs/ProjectReport.pdf";
+// ✅ PDF paths (served from public folder)
+const waterCert = "/pdfs/904437_Certi.pdf";
+const waterResearch = "/pdfs/22988001.Estimating-water-level-in-storage-tank.pdf";
+const waterPatent = "/pdfs/22988001.Estimating-water-level-in-storage-tank.pdf";
+const heartResearch = "/pdfs/ProjectReport.pdf";
 
 const Projects = () => {
   // 🔹 Academic Projects
@@ -30,7 +30,7 @@ const Projects = () => {
     {
       title: "Heart Rate Monitoring System",
       description:
-        "A minor IoT project using Arduino and pulse sensor for real-time heart rate detection.",
+        "A minor IoT project using Arduino and a pulse sensor for real-time heart rate detection.",
       github:
         "https://github.com/sharma-sonu/Heartbeat-Monitoring-system-using-Arduino",
       image: Heart,
@@ -43,7 +43,7 @@ const Projects = () => {
     {
       title: "Portfolio Website",
       description:
-        "My personal responsive portfolio showcasing projects, certifications, and journey.",
+        "A personal responsive portfolio showcasing projects, certifications, and journey.",
       github: "https://github.com/sharma-sonu/Sonu_Portfolio",
       image: portfolioImg,
     },
@@ -94,7 +94,7 @@ const Projects = () => {
     </motion.div>
   );
 
-  // 🔹 PDF Frame Component (first page + download)
+  // 🔹 PDF Frame Component
   const PdfFrame = ({ src, title }) => (
     <motion.div
       variants={cardVariants}
@@ -103,14 +103,12 @@ const Projects = () => {
       viewport={{ once: true }}
       className="bg-white/10 backdrop-blur-md rounded-2xl p-5 shadow-lg hover:shadow-yellow-400/40 transition flex flex-col justify-between"
     >
-      {/* Show only first page of PDF */}
       <iframe
         src={`${src}#page=1&toolbar=0&navpanes=0&scrollbar=0`}
         title={title}
-        className="w-full h-64 rounded-xl border border-white/20 shadow-md mb-4"
+        className="w-full h-64 md:h-72 rounded-xl border border-white/20 shadow-md mb-4"
       ></iframe>
 
-      {/* Download Button */}
       <a
         href={src}
         download
@@ -132,15 +130,13 @@ const Projects = () => {
           🎓 Academic Projects
         </h3>
 
-        {/* Water Level Project */}
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 mb-16">
           <Card {...academicProjects[0]} />
           <PdfFrame src={academicProjects[0].research} title="Research Paper" />
           <PdfFrame src={academicProjects[0].certificate} title="Certificate" />
         </div>
 
-        {/* Heart Monitoring Project */}
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 mb-16">
           <Card {...academicProjects[1]} />
           <PdfFrame
             src={academicProjects[1].research}
@@ -153,7 +149,7 @@ const Projects = () => {
           💻 Personal Projects
         </h3>
 
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
           {personalProjects.map((p, i) => (
             <Card key={i} {...p} />
           ))}
