@@ -94,40 +94,21 @@ const Projects = () => {
   );
 
   // 🔹 PDF Frame Component
- const PdfFrame = ({ src, title }) => (
-  <motion.div
-    variants={cardVariants}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    className="bg-white/10 backdrop-blur-md rounded-2xl p-5 shadow-lg hover:shadow-yellow-400/40 transition flex flex-col justify-between"
-  >
-    {/* ✅ Desktop PDF Preview */}
-    <div className="hidden md:block">
+  const PdfFrame = ({ src, title }) => (
+    <motion.div
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="bg-white/10 backdrop-blur-md rounded-2xl p-5 shadow-lg hover:shadow-yellow-400/40 transition flex flex-col justify-between"
+    >
       <iframe
         src={src}
         title={title}
-        className="w-full h-72 rounded-xl border border-white/20 shadow-md"
+        className="w-full h-64 rounded-xl border border-white/20 shadow-md"
       ></iframe>
-    </div>
-
-    {/* ✅ Mobile: show clean button */}
-    <div className="md:hidden flex flex-col items-center justify-center p-6">
-      <p className="text-gray-300 text-sm mb-3">
-        PDF preview isn’t supported on mobile.
-      </p>
-      <a
-        href={src}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition"
-      >
-        Open PDF
-      </a>
-    </div>
-  </motion.div>
-);
-
+    </motion.div>
+  );
 
   // 🔹 Layout
   return (
